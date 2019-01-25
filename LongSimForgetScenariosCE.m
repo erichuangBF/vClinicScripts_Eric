@@ -12,10 +12,14 @@ ORIGINAL_INTERVAL_MINUTES = 5;
 %%
 clear;
 
-files = ["../SimResults/191011_30DayForget/com.bigfoot.vclinic.controller.SmartloopController_raw.mat" ...
-         "../SimResults/191011_NoForget/com.bigfoot.vclinic.controller.SmartloopController_raw.mat"];
 
-optionNames = ["Forget30Day", "ForgetNever"];
+files = ["../SimResults/191011_30DayForget/com.bigfoot.vclinic.controller.SmartloopController_raw.mat"];
+optionNames = ["Forget30Day"];
+
+
+% files = ["../SimResults/191011_30DayForget/com.bigfoot.vclinic.controller.SmartloopController_raw.mat" ...
+%          "../SimResults/191011_NoForget/com.bigfoot.vclinic.controller.SmartloopController_raw.mat"];
+% optionNames = ["Forget30Day", "ForgetNever"];
 
 assert(length(files) == length(optionNames), ...
     "Number of result files don't match number of option names provided");
